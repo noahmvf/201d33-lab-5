@@ -60,7 +60,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 //input three parameters that are numbers
-//output an array: 
+//output an array with: 
 //1st element = sum of the three numbers 
 //2nd element = product of the three numbers
 //3rd element = string for the sum
@@ -91,21 +91,21 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 //input an array of numbers as the argument
 //output 1: an array where the first element is the sum of the numbers in the argument array
-// output 2: second element of the array is a string
+// output 2: second element of the array is a string with number and string elements
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
-  var sum = 0;
-  for (var i = 0; i < testArray.length; i++) {
-    sum += testArray[i];
+  var sumNums = 0;
+  for (var i = 0; i < testArray.length; i = sum(i, 1)[0]) {
+    sumNums = sum(sumNums, testArray[i])[0];
   }
-
-  return [sum, testArray + ' was passed in as an array of numbers, and 9 is their sum.'];
+  
+  return [sumNums, testArray + ' was passed in as an array of numbers, and ' + sumNums + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+// testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -120,21 +120,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-//input an array as an argument
-//output an array
-//first element: product of the argument array
-//second element: a string
-
 function multiplyArray(testArray) { //eslint-disable-line
-  var product = 1;
-  for (var i = 0; i < testArray.length; i++) {
-    product *= testArray[i];
-  }
 
-  return [product, 'The numbers ' + testArray + ' have a product of ' + product + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray);
+// testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
