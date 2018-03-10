@@ -60,7 +60,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 //input three parameters that are numbers
-//output an array: 
+//output an array with: 
 //1st element = sum of the three numbers 
 //2nd element = product of the three numbers
 //3rd element = string for the sum
