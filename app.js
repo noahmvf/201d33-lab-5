@@ -60,15 +60,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 //input three parameters that are numbers
-//output an array: 
+//output an array with: 
 //1st element = sum of the three numbers 
 //2nd element = product of the three numbers
 //3rd element = string for the sum
 //4th element = string for the product
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var sumNums = a + b + c;
-  var productNums = a * b * c;
-  return [sumNums, productNums, a + ' and ' + b + ' and ' + c + ' sum to ' + sumNums + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productNums + '.'];
+  var sumAB = sum(a, b)[0];
+  var sumABC = sum(sumAB, c)[0];
+  var productAB = multiply(a, b)[0];
+  var productABC = multiply(productAB, c)[0];
+  return [sumABC, productABC, a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productABC + '.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -103,7 +105,7 @@ function sumArray(testArray) { //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+// testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
