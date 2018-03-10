@@ -105,7 +105,7 @@ function sumArray(testArray) { //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -120,11 +120,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+// input an array of numbers
+//output an array with a product and a string 
 function multiplyArray(testArray) { //eslint-disable-line
+  var productNums = 1;
+  for (var j = 0; j < testArray.length; j = (sum(j, 1)[0])){
+    productNums = multiply(productNums, testArray[j])[0];
+  }
 
+  return [productNums, 'The numbers ' + testArray + ' have a product of ' + productNums + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
