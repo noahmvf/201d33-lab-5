@@ -93,12 +93,12 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
-  var sum = 0;
-  for (var i = 0; i < testArray.length; i++) {
-    sum += testArray[i];
+  var sumNums = 0;
+  for (var i = 0; i < testArray.length; i = sum(i, 1)[0]) {
+    sumNums = sum(sumNums, testArray[i])[0];
   }
-
-  return [sum, testArray + ' was passed in as an array of numbers, and 9 is their sum.'];
+  
+  return [sumNums, testArray + ' was passed in as an array of numbers, and ' + sumNums + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
